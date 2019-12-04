@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+ 
+<sqlMap>
+    
+    <typeAlias alias="MemberVO" type="com.snt.springproject.domain.MemberVO" />
+    
+    <resultMap id="member" class="com.snt.springproject.domain.MemberVO">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    
+    <select id ="memberDao.selectMember" resultClass="MemberVO">
+        select * from member
+    </select>
+</sqlMap>
